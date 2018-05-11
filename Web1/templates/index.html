@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Flask intro</title>
+  </head>
+  <body>
+    <h3>C4E Blog</h3>
+
+    <!--jinja2  -->
+    {% for p in posts %}
+      <h5>{{ p.title }}</h5>
+      <p>
+        {{ p.content }}
+      </p>
+
+      By:
+
+      {% if p.gender == 0 %}
+      Misss
+      {% elif p.gender == 1 %}
+      Mr
+      {% endif %}
+
+
+    {% endfor %}
+
+  </body>
+</html>
