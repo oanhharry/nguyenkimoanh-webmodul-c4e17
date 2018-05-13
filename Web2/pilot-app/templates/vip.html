@@ -6,14 +6,18 @@
   </head>
   <body>
 
-    {% for vip in all_vip %}:
+    {% for vip in all_vip %}
+      <div>
+
+        <img src="../static/image/male-profile.jpg" alt="">
         <p> Name: {{ vip.name}}</p>
         <p> Gender: {{ vip.gender}}</p>
         <p> Phone: {{ vip.phone}}</p>
         <p> Job: {{ vip.job }}</p>
         <p> Company: {{ vip.company }}</p>
         <p> contacted: {{ vip.contacted }}</p>
-
+    
+      </div>
     {% endfor %}
 
 

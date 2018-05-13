@@ -29,8 +29,11 @@ def customer():
 @app.route('/vip')
 def vip():
     all_customer = Customer.objects(contacted = 0, gender = 1)
-    # for i in range (10):
-    all_vip = all_customer
+    all_vip = []
+    for index, vip in enumerate(all_customer):
+        all_vip.append(all_customer[index])
+        if index == 9:
+            break
     return render_template('vip.html',all_vip = all_vip)
 
 

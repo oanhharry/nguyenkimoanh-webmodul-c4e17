@@ -3,11 +3,13 @@ import mlab
 
 mlab.connect()
 
-find_id = Service.objects.get(id='5af5a3bb46b3a9341ce23c72')
-find_id.delete()
+#search by id with 2 option:
 
+# find_id = Service.objects.get(id='5af5a22646b3a9316bf611a0')
 
-# test = Service.objects.with_id('5af59cd846b3a92829370fe9')
+find_id = Service.objects.with_id('5af5a22646b3a9316bf611a0')
 
-# test = mlab.Service.find({"_id": ObjectId("5af59cd846b3a92829370fe9")})
+#delete the record
+# find_id.delete()
+
 print(find_id["name"])
