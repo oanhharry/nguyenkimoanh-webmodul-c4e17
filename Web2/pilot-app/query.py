@@ -18,4 +18,11 @@ first_service = all_service[0]
 #     print(customer['name'])
 #     if index == 10:
 #         break
-print(first_service['name'])
+# print(first_service['name'])
+
+if hera is not None:
+    print(hera.address)
+    hera.update(set_address = "Trần Duy Hưng")
+    print(hera.address)
+else:
+    print("Service not found")

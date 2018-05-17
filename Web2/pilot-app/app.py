@@ -12,6 +12,7 @@ mlab.connect()
 #create collection
 
 
+
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -35,6 +36,11 @@ def vip():
         if index == 9:
             break
     return render_template('vip.html',all_vip = all_vip)
+
+@app.route('/admin')
+def admin():
+    all_service = Service.objects()
+    return render_template('admin.html', all_service = all_service)
 
 
 if __name__ == '__main__':
