@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Mùa đông không lạnh</title>
+  </head>
+  <body>
+    <h1>Real search page</h1>
+    {% for service in all_service %}
+    <div>
+      <img src="../static/image/{{service.image}}.jpg" alt="">
+      <p> Tên: {{ service.name }}</p>
+      <p> Giới tính:
+        {% if gender ==0 %}
+        Nữ
+        {% else %}
+        Nam
+        {% endif %}
+      </p>
+      <p> Chiều cao: {{ service.height }}</p>
+
+      <p> Năm sinh: {{ service.yob }}</p>
+      <p> Tính cách: {{ service.description }}</p>
+      <p> Số đo 3 vòng: {{ service.measurement }}</p>
+
+
+
+    </div>
+    {% endfor %}
+  </body>
+</html>

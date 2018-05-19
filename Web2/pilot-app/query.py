@@ -3,6 +3,7 @@ from models.customer import Customer
 import mlab
 
 mlab.connect()
+
 all_service = Service.objects(gender=1)
 all_customer = Customer.objects(gender = 1, contacted = 0)
 
@@ -20,9 +21,12 @@ first_service = all_service[0]
 #         break
 # print(first_service['name'])
 
-if hera is not None:
-    print(hera.address)
-    hera.update(set_address = "Trần Duy Hưng")
-    print(hera.address)
-else:
-    print("Service not found")
+# if hera is not None:
+#     print(hera.address)
+#     hera.update(set_address = "Trần Duy Hưng")
+#     print(hera.address)
+# else:
+#     print("Service not found")
+
+#delete all collectin service
+Service.objects.delete()

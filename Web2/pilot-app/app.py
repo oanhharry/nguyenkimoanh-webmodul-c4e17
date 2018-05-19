@@ -39,6 +39,11 @@ def delete(service_id):
 def index():
     return render_template('index.html')
 
+@app.route('/search2')
+def search2():
+    all_service = Service.objects()
+    return render_template('search2.html', all_service = all_service)
+
 @app.route('/search/<g>')
 def search(g):
     all_service = Service.objects(gender = g, yob__lt=2000, address__contains = "Hà Nội" )
