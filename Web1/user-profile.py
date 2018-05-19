@@ -20,8 +20,8 @@ def profile(username):
 
     }
     if username in users.keys():
-        
-        return render_template('profile.html', users = users, username = username)
+        user = users[username]
+        return render_template('profile.html', user = user)
     else:
         return "User not found"
 
