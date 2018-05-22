@@ -8,7 +8,7 @@
     <h1>Real search page</h1>
     {% for service in all_service %}
     <div>
-      <img src="../static/image/{{service.image}}.jpg" alt="">
+      <img src="../static/image/{{service.image}}.jpg" alt="" height="200" width="300">
       <p> Tên: {{ service.name }}</p>
       <p> Giới tính:
         {% if gender ==0 %}
@@ -22,10 +22,11 @@
       <p> Năm sinh: {{ service.yob }}</p>
       <p> Tính cách: {{ service.description }}</p>
       <p> Số đo 3 vòng: {{ service.measurement }}</p>
-
+      <a href="{{ url_for('detail', service_id = service.id) }}">Chi tiết</a>
 
 
     </div>
+    <br>
     {% endfor %}
   </body>
 </html>

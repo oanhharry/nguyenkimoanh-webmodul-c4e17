@@ -11,6 +11,16 @@ mlab.connect()
 #design database
 #create collection
 
+@app.route('/detail/<service_id>')
+def detail(service_id):
+    service_detail = Service.objects.with_id(service_id)
+    return render_template('detail.html', service_detail = service_detail)
+
+@app.route('/search2')
+def search2():
+    all_service = Service.objects()
+    return render_template('search2.html', all_service = all_service)
+
 @app.route('/new-service',methods = ['GET', 'POST'])
 def create():
     if request.method == "GET":
@@ -19,10 +29,12 @@ def create():
         form = request.form
         name = form['name']
         yob = form['yob']
+        phone = form['phone']
+        gender = form['gender']
         # save service vào database
-        new_service = Service(name = name, yob = yob)
-        new_service.save()
-        return redirect (url_for('admin'))
+    new_service = Service(name = name, yob = yob, phone = phone, gender = gender)
+    new_service.save()
+    return redirect (url_for('admin'))
 
 @app.route('/delete/<service_id>')
 def delete(service_id):
@@ -38,11 +50,6 @@ def delete(service_id):
 @app.route('/')
 def index():
     return render_template('index.html')
-
-@app.route('/search2')
-def search2():
-    all_service = Service.objects()
-    return render_template('search2.html', all_service = all_service)
 
 @app.route('/search/<g>')
 def search(g):
@@ -68,7 +75,6 @@ def vip():
 def admin():
     all_service = Service.objects()
     return render_template('admin.html', all_service = all_service)
-
 
 if __name__ == '__main__':
   app.run(debug=True)
