@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Trang chủ</title>
+  </head>
+  <body>
+    <h1> C4E 17 cms app </h1>
+    <a href="{{ url_for('login')}}"> Đăng nhập </a>
+    <br>
+
+    {% for video in videos %}
+    <div>
+      <img src="{{ video.thumbnail}}" alt="" width="200px" height="130">
+      <b>{{ video.title}}</b>
+      <span> {{ video.views }}</span>
+    <!--youtube id of youtube ID NOT id of vide document  -->
+      <a href="{{ url_for('detail', youtube_id = video.youtube_id) }}">Xem thêm</a>
+
+    </div>
+    {% endfor %}
+
+  </body>
+</html>

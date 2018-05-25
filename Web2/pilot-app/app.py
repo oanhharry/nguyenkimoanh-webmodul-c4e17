@@ -11,6 +11,11 @@ mlab.connect()
 #design database
 #create collection
 
+@app.route('/sign-in')
+def signin():
+    return render_template('signin.html')
+
+
 @app.route('/detail/<service_id>')
 def detail(service_id):
     service_detail = Service.objects.with_id(service_id)
