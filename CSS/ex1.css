@@ -1,0 +1,63 @@
+.text-upper{
+  text-transform: uppercase;
+}
+.arial{
+  font-family: arial;
+}
+.bolder{
+  font-weight: bold;
+}
+.center{
+  text-align: center;
+}
+#sp70{
+  padding: 0px 70px;
+}
+.d-inline-block{
+  display: inline-block;
+}
+.bg-green{
+  background-color: green;
+}
+.h-100px{
+  height: 100px
+}
+.w-100{
+  width: 100%
+}
+.bg-yellow{
+  background-color: yellow;
+}
+.bg-grey{
+  background-color: #BDBDBD;
+}
+.w-20{
+  width: 20%;
+}
+.b-blue{
+  background-color: #81C784;
+}
+.b-red{
+  background-color: #e57373;
+}
+.margin-x5px{
+  margin: 0px 5px;
+}
+.margin-x3px{
+  margin: 0px 3px;
+}
+.margin-x10px{
+  margin: 0px 10px;
+}
+.h-200px{
+  height: 200px;
+}
+.w-24{
+  weight:24%;
+}
+.p-70px{
+  padding: 0px 70px;
+}
+.w-85{
+  width: 85%;
+}
