@@ -1,0 +1,52 @@
+#background-ele{
+  height: 400px;
+  width: 100%;
+
+  background-image: url('http://it-leaders.com.pl/wp-content/uploads/2016/12/jak-zosta%C4%87-programist%C4%85-720x340.jpg');
+  background-size: cover;
+}
+
+#flex-box{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+
+}
+.h-200px{
+  height: 200px;
+}
+.box-circle{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.m-100px-50px{
+  margin: 100px 50px;
+}
+.text-center{
+  text-align: center;
+}
+.text-upper{
+  text-transform: uppercase;
+}
+.m-0-auto-10{
+  display: block;
+  margin: 0px auto 10px;
+}
+.font-helvatical{
+  font-family: : arial;
+}
+
+ .t-color-white{
+   color: white;
+ }
+.w-100{
+  width: 100%;
+}
+.b-05-white{
+  border: 0.5px solid white;
+}
+.my-10px{
+  margin: 10px 0px;
+}
