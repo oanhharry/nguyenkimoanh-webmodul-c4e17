@@ -123,9 +123,14 @@ height: 20px;
 .mb-30px{
   margin-bottom: 30px;
 }
+.p-0-60px{
+  padding: 0px 60px;
+}
 .flex-box-2{
   display: flex;
   justify-content: flex-end;
   flex-flow: column nowrap;
-  align-items: flex-end;
+}
+.text-align-center{
+  text-align: center;
 }
